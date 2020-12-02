@@ -1,0 +1,93 @@
+
+/* ALERTE */
+/* ALERTE */
+/* ALERTE */
+/* ALERTE */
+/* ALERTE */
+/* ALERTE */
+
+/* -----  IMPORT --- */
+@import "./Base/font";
+@import "./Utils/variables";
+
+/* ++++ IMPORT +++++*/
+
+
+/* ----- GLOBAL ----- */
+
+a{
+    text-decoration: none;
+}
+
+#bloc_page{
+    max-width: 560px;
+    margin: auto;
+}
+
+/* ++++ GLOBAL +++ */
+
+/* ----- HEDEAR ----- */
+
+.fullhead{
+    &_img{
+        text-align: center;
+    }
+    &_find{
+        background-color: lighten($color: $cd-grey, $amount: 3);
+        display: flex;
+        flex-direction: column;
+        &_locate{
+            border-top:  3px solid rgba($color: darken($cd-grey,55), $alpha: 0.2);
+            display: flex;
+            font-weight: bold;
+            justify-content: center;
+            i{
+                padding-right: 1em;
+            }
+            p{
+                padding-right: 3em;
+            }
+            align-items: center;
+            background-color: $cd-grey;
+        }
+        &_book{
+            display: flex;
+            flex-direction: column;
+            &-txt{
+                margin-top: 6%;
+                margin-left: 10%;
+                margin-right: 10%;
+                h1{
+                    font-size: 1.5em;
+                    text-align: center;
+                    font-weight: bolder;
+                }
+                p{
+                    text-align: center;
+                    font-weight: 100;
+                    color: darken($cd-grey,55);
+                }
+                margin-bottom: 5%;
+            }
+            &-btn{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+                font-size: 0.6em;
+                border-radius: 25px;
+                background: linear-gradient($cd-secondary, $cd-primary);
+                margin-left: 22%;
+                margin-right: 20%;
+                a{
+                    color: white;
+                    padding: 1% 12% 1% 12%;
+                    border-radius: 25px;
+                }
+            }
+        }
+        padding-bottom: 15%;
+    }
+}
+
+/* ++++ HEDEAR +++ */

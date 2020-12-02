@@ -1,0 +1,88 @@
+/* ALERTE */
+/* ALERTE */
+/* ALERTE */
+/* ALERTE */
+/* ALERTE */
+/* ALERTE */
+/* -----  IMPORT --- */
+@font-face {
+  font-family: "RobotoR";
+  src: url("../../font/Roboto-Regular.ttf") format("ttf"); }
+@font-face {
+  font-family: "RobotoB";
+  font-style: bold;
+  src: url("../../font/Roboto-Bold.ttf") format("ttf"); }
+@font-face {
+  font-family: "RobotoL";
+  font-style: thin;
+  src: url("../../font/Roboto-Thin.ttf") format("ttf"); }
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../../font/Shrikhand-Regular.ttf") format("ttf"); }
+html, body {
+  font-family: "RobotoR", Arial, Helvetica, sans-serif;
+  overflow-x: hidden; }
+
+/* ++++ IMPORT +++++*/
+/* ----- GLOBAL ----- */
+a {
+  text-decoration: none; }
+
+#bloc_page {
+  max-width: 560px;
+  margin: auto; }
+
+/* ++++ GLOBAL +++ */
+/* ----- HEDEAR ----- */
+.fullhead_img {
+  text-align: center; }
+.fullhead_find {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15%; }
+  .fullhead_find_locate {
+    border-top: 3px solid rgba(94, 94, 94, 0.2);
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea; }
+    .fullhead_find_locate i {
+      padding-right: 1em; }
+    .fullhead_find_locate p {
+      padding-right: 3em; }
+  .fullhead_find_book {
+    display: flex;
+    flex-direction: column; }
+    .fullhead_find_book-txt {
+      margin-top: 6%;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-bottom: 5%; }
+      .fullhead_find_book-txt h1 {
+        font-size: 1.5em;
+        text-align: center;
+        font-weight: bolder; }
+      .fullhead_find_book-txt p {
+        text-align: center;
+        font-weight: 100;
+        color: #5e5e5e; }
+    .fullhead_find_book-btn {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.6em;
+      border-radius: 25px;
+      background: linear-gradient(#FF79DA, #9356DC);
+      margin-left: 22%;
+      margin-right: 20%; }
+      .fullhead_find_book-btn a {
+        color: white;
+        padding: 1% 12% 1% 12%;
+        border-radius: 25px; }
+
+/* ++++ HEDEAR +++ */
+
+/*# sourceMappingURL=style.css.map */
