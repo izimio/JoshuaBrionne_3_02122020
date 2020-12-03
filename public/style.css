@@ -20,7 +20,7 @@
   font-family: "Shrikhand";
   src: url("../../font/Shrikhand-Regular.ttf") format("ttf"); }
 html, body {
-  font-family: "RobotoR", Arial, Helvetica, sans-serif;
+  font-family: "RobotoL", Arial, Helvetica, sans-serif;
   overflow-x: hidden; }
 
 @keyframes lds-dual-ring {
@@ -28,14 +28,28 @@ html, body {
     transform: rotate(0deg) scale(5); }
   100% {
     transform: rotate(360deg) scale(5); } }
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0); }
+  75% {
+    opacity: 1;
+    transform: scale(1.5); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
 /* ++++ IMPORT +++++*/
 /* ----- GLOBAL ----- */
+html, body {
+  overflow-x: hidden; }
+
 a {
   text-decoration: none; }
 
 #bloc_page {
   max-width: 560px;
-  margin: auto; }
+  margin: auto;
+  width: auto; }
 
 .primary {
   color: #9356DC; }
@@ -177,44 +191,125 @@ a {
 /* ++++ HEDEAR +++ */
 /* ++++ MAIN ++++*/
 main {
-  background-color: #eaeaea; }
+  background-color: #efefef;
+  padding-bottom: 10%; }
 
 .fullmain {
   margin-left: 4%;
   margin-right: 2%;
   display: flex;
   flex-direction: column; }
+  .fullmain_tilte {
+    padding-top: 6%; }
+  .fullmain_allcards {
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: -5%; }
   .fullmain_eachcards {
     position: relative;
     width: 330px;
-    height: 250px;
+    height: 200px;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    box-shadow: 1px 1px 15px 0px #848484;
+    border-radius: 15px; }
     .fullmain_eachcards-img {
-      height: 70%;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px; }
+      height: 70%; }
       .fullmain_eachcards-img img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px; }
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px; }
     .fullmain_eachcards-caption {
       height: 30%;
       display: flex;
       align-items: center;
       justify-content: space-between;
       background-color: white;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px; }
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px; }
+      .fullmain_eachcards-caption-txt {
+        margin-left: 4%; }
+        .fullmain_eachcards-caption-txt h2 {
+          font-size: 1em;
+          margin-bottom: 0%;
+          font-weight: bold; }
+        .fullmain_eachcards-caption-txt p {
+          margin-top: 0%;
+          font-weight: lighter; }
+      .fullmain_eachcards-caption-heart {
+        position: relative;
+        margin-right: 8%;
+        transform: scale(1.7);
+        color: #eaeaea;
+        margin-bottom: 2%; }
+        .fullmain_eachcards-caption-heart:hover {
+          color: transparent; }
+          .fullmain_eachcards-caption-heart:hover::after {
+            font-family: "Font Awesome 5 Free";
+            content: "\f004";
+            display: inline-block;
+            padding-right: 3px;
+            vertical-align: middle;
+            font-weight: 800;
+            position: absolute;
+            left: -30%;
+            top: -25%;
+            padding: 30%;
+            color: linear-gradient(160deg, #FF79DA, #9356DC);
+            cursor: pointer;
+            background-image: linear-gradient(160deg, #FF79DA, #9356DC);
+            background-clip: text;
+            animation: appear 500ms ease-in-out alternate; }
     .fullmain_eachcards h3 {
       position: absolute;
-      right: 5%;
+      top: -1%;
+      right: 4%;
       font-size: 1em;
       background-color: #99E2D0;
       color: #278870;
       padding: 2% 3% 2% 3%;
       border-radius: 5px; }
+
+/* ---- MAIN ---- */
+/* ++++ FOOTER +++ */
+footer {
+  background-color: #353535;
+  color: white;
+  padding-bottom: 10%; }
+
+.fullfooter {
+  margin-left: 8%;
+  display: flex;
+  flex-direction: column; }
+  .fullfooter a {
+    color: white; }
+  .fullfooter h2 {
+    color: white;
+    font-family: "Shrikhand";
+    margin-bottom: 1%; }
+  .fullfooter_liste-first {
+    margin-left: 1%;
+    display: flex;
+    align-items: center; }
+    .fullfooter_liste-first i {
+      padding-right: 4%; }
+  .fullfooter_liste-second {
+    margin-top: -5%;
+    display: flex;
+    align-items: center; }
+    .fullfooter_liste-second i {
+      transform: scaleX(0.7);
+      padding-right: 3%; }
+  .fullfooter_liste-third {
+    margin-top: -5%;
+    margin-left: 1%; }
+    .fullfooter_liste-third p {
+      margin-top: 5%;
+      margin-bottom: 4%; }
 
 /*# sourceMappingURL=style.css.map */
