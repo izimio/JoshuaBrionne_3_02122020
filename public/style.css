@@ -23,6 +23,16 @@ html, body {
   font-family: "RobotoR", Arial, Helvetica, sans-serif;
   overflow-x: hidden; }
 
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg) scale(4); }
+  100% {
+    transform: rotate(360deg) scale(4); } }
+@keyframes dis {
+  from {
+    opacity: 1; }
+  to {
+    transform: scale(-5); } }
 /* ++++ IMPORT +++++*/
 /* ----- GLOBAL ----- */
 a {
@@ -33,9 +43,30 @@ a {
   margin: auto; }
 
 /* ++++ GLOBAL +++ */
+.lds-dual-ring {
+  position: absolute;
+  transition: 0ms;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  left: 40%; }
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 6px solid #9356DC;
+  border-color: #9356DC transparent #99E2D0 transparent;
+  animation: lds-dual-ring 1s ease-in-out;
+  animation-iteration-count: 3; }
+
 /* ----- HEDEAR ----- */
 .fullhead_img {
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 2%; }
 .fullhead_find {
   background-color: #f2f2f2;
   display: flex;
@@ -75,13 +106,17 @@ a {
       text-align: center;
       font-size: 0.6em;
       border-radius: 25px;
-      background: linear-gradient(#FF79DA, #9356DC);
-      margin-left: 22%;
-      margin-right: 20%; }
+      margin-left: 18%;
+      margin-right: 18%; }
       .fullhead_find_book-btn a {
+        background: linear-gradient(160deg, #FF79DA, #9356DC);
         color: white;
-        padding: 1% 12% 1% 12%;
-        border-radius: 25px; }
+        padding: 1% 13% 1% 12%;
+        border-radius: 25px;
+        box-shadow: 1px 1px 15px 0px #848484; }
+        .fullhead_find_book-btn a:hover {
+          background: linear-gradient(160deg, #ff83dd, #985ede);
+          box-shadow: 2px 2px 16px 0px #848484; }
 
 /* ++++ HEDEAR +++ */
 
