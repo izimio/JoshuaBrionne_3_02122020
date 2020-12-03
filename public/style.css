@@ -25,14 +25,9 @@ html, body {
 
 @keyframes lds-dual-ring {
   0% {
-    transform: rotate(0deg) scale(4); }
+    transform: rotate(0deg) scale(5); }
   100% {
-    transform: rotate(360deg) scale(4); } }
-@keyframes dis {
-  from {
-    opacity: 1; }
-  to {
-    transform: scale(-5); } }
+    transform: rotate(360deg) scale(5); } }
 /* ++++ IMPORT +++++*/
 /* ----- GLOBAL ----- */
 a {
@@ -119,5 +114,43 @@ a {
           box-shadow: 2px 2px 16px 0px #848484; }
 
 /* ++++ HEDEAR +++ */
+/* ++++ MAIN ++++*/
+main {
+  background-color: #eaeaea; }
+
+.fullmain {
+  margin-left: 4%;
+  margin-right: 2%;
+  display: flex;
+  flex-direction: column; }
+  .fullmain_eachcards {
+    position: relative;
+    width: 330px;
+    height: 250px;
+    display: flex;
+    flex-direction: column; }
+    .fullmain_eachcards-img {
+      height: 70%;
+      overflow: hidden; }
+      .fullmain_eachcards-img img {
+        object-fit: cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px; }
+    .fullmain_eachcards-caption {
+      height: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: white;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px; }
+    .fullmain_eachcards h3 {
+      position: absolute;
+      right: 15px;
+      font-size: 1em;
+      background-color: #99E2D0;
+      color: #278870;
+      padding: 2% 3% 2% 3%;
+      border-radius: 5px; }
 
 /*# sourceMappingURL=style.css.map */
