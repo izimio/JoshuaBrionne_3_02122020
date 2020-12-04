@@ -40,11 +40,27 @@ a {
 .darkgrey {
   color: #777777; }
 
+@-webkit-keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg) scale(5); }
+  100% {
+    transform: rotate(360deg) scale(5); } }
+
 @keyframes lds-dual-ring {
   0% {
     transform: rotate(0deg) scale(5); }
   100% {
     transform: rotate(360deg) scale(5); } }
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0); }
+  75% {
+    opacity: 1;
+    transform: scale(1.5); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
 @keyframes appear {
   0% {
     opacity: 0;
@@ -55,6 +71,13 @@ a {
   100% {
     opacity: 1;
     transform: scale(1); } }
+@-webkit-keyframes disappear {
+  0% {
+    opacity: 0;
+    z-index: 2; }
+  100% {
+    opacity: 0;
+    z-index: 2; } }
 @keyframes disappear {
   0% {
     opacity: 0;
@@ -62,6 +85,44 @@ a {
   100% {
     opacity: 0;
     z-index: 2; } }
+@-webkit-keyframes move {
+  0% {
+    transform: translateX(0%); }
+  100% {
+    transform: translateX(-180%); } }
+@keyframes move {
+  0% {
+    transform: translateX(0%); }
+  100% {
+    transform: translateX(-180%); } }
+@-webkit-keyframes comehere {
+  0% {
+    transform: scaleX(0);
+    transform-origin: right; }
+  to {
+    transform: scaleX(1);
+    transform-origin: right; } }
+@keyframes comehere {
+  0% {
+    transform: scaleX(0);
+    transform-origin: right; }
+  to {
+    transform: scaleX(1);
+    transform-origin: right; } }
+@-webkit-keyframes turn {
+  0% {
+    transform: rotate(0deg) scale(1.6); }
+  80% {
+    transform: rotate(400deg) scale(1.6); }
+  100% {
+    transform: rotate(360deg) scale(1.6); } }
+@keyframes turn {
+  0% {
+    transform: rotate(0deg) scale(1.6); }
+  80% {
+    transform: rotate(400deg) scale(1.6); }
+  100% {
+    transform: rotate(360deg) scale(1.6); } }
 /* ++++ GLOBAL +++ */
 /* ----- HEDEAR ----- */
 .fullhead_img {
@@ -207,9 +268,12 @@ footer {
 /* OTHER */
 .spinner {
   z-index: -1;
-  animation: disappear 5ms;
-  animation-delay: 3300ms;
-  animation-fill-mode: forwards; }
+  -webkit-animation: disappear 5ms;
+          animation: disappear 5ms;
+  -webkit-animation-delay: 3300ms;
+          animation-delay: 3300ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
 
 .lds-dual-ring {
   position: absolute;
@@ -228,10 +292,14 @@ footer {
   border-radius: 50%;
   border: 6px solid #9356DC;
   border-color: #9356DC transparent #99E2D0 transparent;
-  animation: lds-dual-ring 1s ease-in-out;
-  animation-iteration-count: 3;
-  animation-delay: 300ms;
-  animation-fill-mode: backwards; }
+  -webkit-animation: lds-dual-ring 1s ease-in-out;
+          animation: lds-dual-ring 1s ease-in-out;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards; }
 
 .btn_heart {
   color: red;
@@ -258,8 +326,10 @@ footer {
       color: linear-gradient(160deg, #FF79DA, #9356DC);
       cursor: pointer;
       background-image: linear-gradient(160deg, #FF79DA, #9356DC);
-      background-clip: text;
-      animation: appear 400ms ease-in-out alternate;
+      -webkit-background-clip: text;
+              background-clip: text;
+      -webkit-animation: appear 400ms ease-in-out alternate;
+              animation: appear 400ms ease-in-out alternate;
       background-color: transparent; }
 
 .btn_heart2 {
@@ -286,8 +356,10 @@ footer {
       color: linear-gradient(160deg, #FF79DA, #9356DC);
       cursor: pointer;
       background-image: linear-gradient(160deg, #FF79DA, #9356DC);
-      background-clip: text;
-      animation: appear 400ms ease-in-out alternate;
+      -webkit-background-clip: text;
+              background-clip: text;
+      -webkit-animation: appear 400ms ease-in-out alternate;
+              animation: appear 400ms ease-in-out alternate;
       background-color: transparent; }
 
 /* ++++ OTHER */
@@ -329,7 +401,8 @@ footer {
       .fullmain_eachcards-img img {
         width: 100%;
         height: 140px;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px; }
     .fullmain_eachcards-caption {
@@ -405,63 +478,99 @@ footer {
 .fullmain2 {
   margin-left: 4%;
   margin-right: 4%; }
-  .fullmain2_section-tiltle {
-    font-size: 0.8em;
-    font-weight: 100;
-    color: #6b6b6b; }
-  .fullmain2_section .underligne {
-    margin-top: -3%;
-    margin-bottom: -3%;
-    border-top: 3px solid #99E2D0;
-    width: 4em; }
-  .fullmain2_section_allcards {
-    display: flex;
-    flex-direction: column; }
-    .fullmain2_section_allcards_eachcards {
+  .fullmain2_section {
+    padding-bottom: 5%; }
+    .fullmain2_section-tiltle {
+      font-size: 0.8em;
+      font-weight: 100;
+      color: #6b6b6b; }
+    .fullmain2_section .underligne {
+      margin-top: -3%;
+      margin-bottom: -3%;
+      border-top: 3px solid #99E2D0;
+      width: 4em; }
+    .fullmain2_section_allcards {
       display: flex;
-      margin-top: 5%;
-      border-radius: 15px;
-      background-color: white; }
-      .fullmain2_section_allcards_eachcards_left {
-        margin: 3%;
-        margin-top: 0%;
-        margin-bottom: 0%;
-        border: 2px solid red;
-        width: 100%;
+      flex-direction: column; }
+      .fullmain2_section_allcards_eachcards {
         display: flex;
-        justify-content: space-between; }
-        .fullmain2_section_allcards_eachcards_left-plat {
-          padding-right: 25%;
+        margin-top: 5%;
+        border-radius: 15px;
+        background-color: white; }
+        .fullmain2_section_allcards_eachcards_left {
+          margin: 3%;
+          margin-top: 0%;
+          margin-bottom: 0%;
+          width: 120%;
           display: flex;
-          flex-direction: column; }
-          .fullmain2_section_allcards_eachcards_left-plat h3 {
-            text-overflow: ellipsis;
-            font-size: 1em;
-            margin-bottom: 0%; }
-          .fullmain2_section_allcards_eachcards_left-plat p {
-            text-overflow: ellipsis;
-            margin-top: 3%;
-            font-size: 0.9em; }
-        .fullmain2_section_allcards_eachcards_left-prix {
-          display: flex;
-          align-items: flex-end; }
-      .fullmain2_section_allcards_eachcards_right {
-        border: 2px solid red;
-        border-top-right-radius: 15%;
-        border-bottom-right-radius: 15%; }
-      .fullmain2_section_allcards_eachcards:hover > .fullmain2_section_allcards_eachcards_right {
-        border: 2px solid purple;
-        transition: 400ms;
-        width: 40%;
-        background-color: #99E2D0; }
-        .fullmain2_section_allcards_eachcards:hover > .fullmain2_section_allcards_eachcards_right::after {
-          font-family: "Font Awesome 5 Free";
-          content: "\f058";
-          display: inline-block;
-          padding-right: 3px;
-          vertical-align: middle;
-          font-weight: 800;
-          position: absolute;
-          color: white; }
-
-/*# sourceMappingURL=style.css.map */
+          justify-content: space-between; }
+          .fullmain2_section_allcards_eachcards_left-plat {
+            overflow: visible;
+            width: 100%;
+            padding-right: 25%;
+            display: flex;
+            flex-direction: column; }
+            .fullmain2_section_allcards_eachcards_left-plat h3 {
+              text-overflow: ellipsis;
+              font-size: 1em;
+              margin-bottom: 0%;
+              margin-top: 2%;
+              font-weight: bold; }
+            .fullmain2_section_allcards_eachcards_left-plat p {
+              text-overflow: ellipsis;
+              margin-top: 3%;
+              font-size: 0.9em; }
+          .fullmain2_section_allcards_eachcards_left-prix {
+            font-weight: bold;
+            display: flex;
+            align-items: flex-end; }
+        .fullmain2_section_allcards_eachcards .anim_order {
+          display: none; }
+        .fullmain2_section_allcards_eachcards_right {
+          border-top-right-radius: 15%;
+          border-bottom-right-radius: 15%;
+          -webkit-animation-direction: alternate;
+                  animation-direction: alternate; }
+        .fullmain2_section_allcards_eachcards .fullmain2_section_allcards_eachcards_right-anim {
+          border-top-right-radius: 15%;
+          border-bottom-right-radius: 15%; }
+        .fullmain2_section_allcards_eachcards:hover > .fullmain2_section_allcards_eachcards_right {
+          position: relative; }
+          .fullmain2_section_allcards_eachcards:hover > .fullmain2_section_allcards_eachcards_right .fullmain2_section_allcards_eachcards_right-anim {
+            width: 70px;
+            background-color: #99E2D0;
+            height: 100%;
+            -webkit-animation: comehere 800ms forwards;
+                    animation: comehere 800ms forwards; }
+          .fullmain2_section_allcards_eachcards:hover > .fullmain2_section_allcards_eachcards_right .anim_order {
+            position: absolute;
+            display: inline;
+            top: 35%;
+            left: 80%;
+            -webkit-animation: move 800ms forwards;
+                    animation: move 800ms forwards;
+            color: red; }
+            .fullmain2_section_allcards_eachcards:hover > .fullmain2_section_allcards_eachcards_right .anim_order i {
+              -webkit-animation: turn 800ms forwards;
+                      animation: turn 800ms forwards;
+              color: white; }
+  .fullmain2_commander {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 25px;
+    margin-left: 18%;
+    margin-right: 18%;
+    padding-bottom: 12%;
+    padding-top: 5%; }
+    .fullmain2_commander a {
+      background: linear-gradient(160deg, #FF79DA, #9356DC);
+      color: white;
+      padding: 5% 15% 5% 15%;
+      border-radius: 25px;
+      box-shadow: 1px 1px 15px 0px #848484; }
+      .fullmain2_commander a:hover {
+        background: linear-gradient(160deg, #ff83dd, #985ede);
+        box-shadow: 2px 2px 16px 0px #848484; }
