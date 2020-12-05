@@ -72,9 +72,20 @@
 
 @keyframes move2{
   0%{
-    transform: translateX(80%)
+    transform: translateX(180%)
   } 
   100%{
     transform: translateX(-80%);
   }
+}
+
+@keyframes appearsection{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    transform: rotateY(2%);
+  }
+
 }
