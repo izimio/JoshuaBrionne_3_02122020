@@ -3,3 +3,8 @@ $cd-secondary: #FF79DA;
 $cd-tertiary: #99E2D0;
 $cd-grey: #eaeaea;
 $cd-sectdelay: 400ms;
+$breakpoints:(
+    mobile: 560px,
+    mid: 880px,
+    huge: 2000px
+);
