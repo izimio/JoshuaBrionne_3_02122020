@@ -92,11 +92,15 @@
                     }
                 }
 
+                // ANIMATION ICI
+                // ANIMATION ICI
+                // ANIMATION ICI
 
-
+                            // DIV GLOBAL CONTENANT L'ICONE ET SON CONTAINER
                 &:hover > .fullmain2_section_allcards_eachcards_right{
                     width: 100px;
                     position: relative;
+                    //DIV CONTENANT L'ICONE
                     .fullmain2_section_allcards_eachcards_right-anim{
                         background-color: $cd-tertiary;
                         height: 102%;
@@ -108,11 +112,11 @@
                         display: flex;
                         align-items: center;
                     }
+
+                    //DIV DE L'ICONE
                     .anim_order{
                         margin-left: 40%;
                         margin-right: 40%;
-                        //animation: move 800ms forwards;
-                        //animation translateX l'icone
                         i{
                             text-align: center;
                             display: flex;
@@ -127,8 +131,10 @@
                 }
 
 
-
-
+                // FIN ANIMATION
+                // FIN ANIMATION
+                // FIN ANIMATION
+                
                 &:hover > .fullmain2_section_allcards_eachcards_left{
                     .fullmain2_section_allcards_eachcards_left-plat{
                         width: 12em;
