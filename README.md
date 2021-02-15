@@ -9,4 +9,4 @@ This project include Sass and a lot of other CSS's propreties such as radient an
 
 Moreover the main theme of this project is based on the CSS animation. So we had to create a like animation, and a scrolling animation !
 
-This project was made as fast as the 2nd (in a week-end) 
+This project was made as fast as the 2nd (in a week-end).
